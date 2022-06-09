@@ -45,6 +45,33 @@
     </div>
     </nav>
 
+    <?php 
+    $queryString = http_build_query([
+        'access_key' => '4cf359f5b0195ecb221dd2dc7a6d891b',
+        'keywords' => 'tennis', 
+        'categories' => '-entertainment',
+        'sort' => 'popularity',
+      ]);
+      
+      $ch = curl_init(sprintf('%s?%s', 'http://api.mediastack.com/v1/news', $queryString));
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      
+      $json = curl_exec($ch);
+      
+      curl_close($ch);
+      
+      $apiResult = json_decode($json, true);
+      
+    //   print_r($apiResult);
+    // print_r($apiResult->{"title"})
+
+    foreach ($apiResult['data'] as $data) {
+        echo 'author: ' . $data['author'] . '<br />';
+        echo 'title: ' . $data['title'] . '<br />';
+    }
+
+    ?>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
