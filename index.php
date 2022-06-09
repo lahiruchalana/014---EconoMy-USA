@@ -46,22 +46,47 @@
     </nav>
 
     <?php 
+
+    function array2xml($array, $xml = false){
+
+        if($xml === false){
+            $xml = new SimpleXMLElement('<result/>');
+        }
+
+        foreach($array as $key => $value){
+            if(is_array($value)){
+                array2xml($value, $xml->addChild($key));
+            } else {
+                $xml->addChild($key, $value);
+            }
+        }
+
+        return $xml->asXML();
+    }
+
     $queryString = http_build_query([
         'access_key' => '4cf359f5b0195ecb221dd2dc7a6d891b',
         'categories' => 'business',
-        'sort' => 'popularity',
         'languages' => 'en',
-      ]);
+    ]);
       
-      $ch = curl_init(sprintf('%s?%s', 'http://api.mediastack.com/v1/news', $queryString));
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      $json = curl_exec($ch);
-      curl_close($ch);
-      $apiResult = json_decode($json, true);
-      
-    //   print_r($apiResult);
+    $ch = curl_init(sprintf('%s?%s', 'http://api.mediastack.com/v1/news', $queryString));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $json = curl_exec($ch);
+    curl_close($ch);
+    $apiResult = json_decode($json, true);
+    
+    // Print all received data of News API - JSON format
+    // print_r($apiResult);
     // print_r($apiResult->{"title"})
 
+    // Convert JSON data to XML - using array2xml function
+    $xml = array2xml($apiResult, false);
+
+    echo '<pre>';
+    print_r($xml);
+
+    // List down News using JSON data
     foreach ($apiResult['data'] as $data) {
         echo 'title: ' . $data['title'] . '<br />';
         echo 'description: ' . $data['description'] . '<br />';

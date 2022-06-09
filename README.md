@@ -1,7 +1,10 @@
 #  014---The-Mirror-News
 
 This is a News Website for The Mirror News. 
-Used AJAX, 
+
+#Technologied Used 
+
+AJAX, 
 JavaScript, 
 PHP, 
 MongoDB, 
