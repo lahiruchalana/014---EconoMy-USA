@@ -45,10 +45,28 @@
                 header("Location: data_gdp.php");
                 exit;
             }    
+            function redirectToDataPopulation() {
+                header("Location: data_gdp.php");
+                exit;
+            } 
+            function redirectToDataCAB() {
+                header("Location: data_gdp.php");
+                exit;
+            } 
+            function redirectToDataERate() {
+                header("Location: data_gdp.php");
+                exit;
+            } 
 
             if (isset($_GET['data_gdp'])) {
                 redirectToDataGDP();
-            }
+            } else if (isset($_GET['data_population'])) {
+                redirectToDataPopulation();
+            } else if (isset($_GET['data_cab'])) {
+                redirectToDataCAB();
+            } else if (isset($_GET['data_exchange_rate'])) {
+                redirectToDataERate();
+            } 
         ?>
             
         <div class="row" style="width:100%; margin-top: 100px; ">
