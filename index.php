@@ -21,15 +21,24 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Add <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Edit <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Delete <span class="sr-only">(current)</span></a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
+                Economic Factors
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="index.php?data_gdp=true">GDP of USA</a>
+                <a class="dropdown-item" href="index.php?data_population=true">Population of USA</a>
+                <a class="dropdown-item" href="index.php?data_cab=true">Current Account Balance of USA</a>
+                <a class="dropdown-item" href="index.php?data_exchange_rate=true">Exchange Rate of China Against USA</a>
                 </div>
             </li>
             </ul>
@@ -46,15 +55,15 @@
                 exit;
             }    
             function redirectToDataPopulation() {
-                header("Location: data_gdp.php");
+                header("Location: data_population.php");
                 exit;
             } 
             function redirectToDataCAB() {
-                header("Location: data_gdp.php");
+                header("Location: data_cab.php");
                 exit;
             } 
             function redirectToDataERate() {
-                header("Location: data_gdp.php");
+                header("Location: data_e_rate.php");
                 exit;
             } 
 
@@ -75,18 +84,18 @@
                 <a class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px;" href='index.php?data_gdp=true'>GDP of USA</a>
             </div>
             <div class="col" align="center">
-                <img src="https://imageio.forbes.com/specials-images/imageserve/608b1289ae7bd9de116050b2/United-States-Economy-Improves-and-Returns-to-Normal-After-Crisis/960x0.jpg?format=jpg&width=960" alt="Snow" style="width:40%; border-radius: 50px;  box-shadow: -5px 5px 8px 10px black; " >
-                <Button class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px; " href='index.php?data_population=true'>Population of USA</Button>
+                <img src="https://images.pexels.com/photos/2432110/pexels-photo-2432110.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Snow" style="width:40%; border-radius: 50px;  box-shadow: -5px 5px 8px 10px black; " >
+                <a class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px; " href='index.php?data_population=true'>Population of USA</a>
             </div>
         </div>
         <div class="row" style="width:100%; margin-top: 100px;">
             <div class="col" align="center">
-                <img src="https://imageio.forbes.com/specials-images/imageserve/608b1289ae7bd9de116050b2/United-States-Economy-Improves-and-Returns-to-Normal-After-Crisis/960x0.jpg?format=jpg&width=960" alt="Snow" style="width:40%; border-radius: 50px;  box-shadow: -5px 5px 8px 10px black; " >
-                <Button class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px; " href='index.php?data_cab=true'>Current Account Balance of USA</Button>
+                <img src="https://images.pexels.com/photos/210574/pexels-photo-210574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Snow" style="width:40%; border-radius: 50px;  box-shadow: -5px 5px 8px 10px black; " >
+                <a class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px; " href='index.php?data_cab=true'>Current Account Balance of USA</a>
             </div>
             <div class="col" align="center">
-                <img src="https://imageio.forbes.com/specials-images/imageserve/608b1289ae7bd9de116050b2/United-States-Economy-Improves-and-Returns-to-Normal-After-Crisis/960x0.jpg?format=jpg&width=960" alt="Snow" style="width:40%; border-radius: 50px;  box-shadow: -5px 5px 8px 10px black; " >
-                <Button class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px; " href='index.php?data_exchange_rate=true'>Exchange Rate of China Against USA</Button>
+                <img src="https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Snow" style="width:40%; border-radius: 50px;  box-shadow: -5px 5px 8px 10px black; " >
+                <a class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px; " href='index.php?data_exchange_rate=true'>Exchange Rate of China Against USA</a>
             </div>
         </div>
     </div>

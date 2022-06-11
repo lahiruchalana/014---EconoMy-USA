@@ -57,7 +57,7 @@
 
         // print $xmlDoc->saveXML();
 
-        $xmlDoc=simplexml_load_file("xml/data_gdp.xml") or die("Error: Cannot create object");
+        $xmlDoc=simplexml_load_file("xml/data_population.xml") or die("Error: Cannot create object");
 
         foreach($xmlDoc->children() as $books) {
             echo $books->indicator . ", ";
