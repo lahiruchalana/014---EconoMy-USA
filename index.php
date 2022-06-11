@@ -21,9 +21,6 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
@@ -35,9 +32,6 @@
                 <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -45,25 +39,36 @@
             </form>
         </div>
         </nav>
+
+        <?php 
+            function redirectToDataGDP() {
+                header("Location: data_gdp.php");
+                exit;
+            }    
+
+            if (isset($_GET['data_gdp'])) {
+                redirectToDataGDP();
+            }
+        ?>
             
         <div class="row" style="width:100%; margin-top: 100px; ">
             <div class="col" align="center">
                 <img src="https://imageio.forbes.com/specials-images/imageserve/608b1289ae7bd9de116050b2/United-States-Economy-Improves-and-Returns-to-Normal-After-Crisis/960x0.jpg?format=jpg&width=960" alt="Snow" style="width:40%; border-radius: 50px;  box-shadow: -5px 5px 8px 10px black; " >
-                <Button class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px; ">GDP of USA</Button>
+                <a class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px;" href='index.php?data_gdp=true'>GDP of USA</a>
             </div>
             <div class="col" align="center">
                 <img src="https://imageio.forbes.com/specials-images/imageserve/608b1289ae7bd9de116050b2/United-States-Economy-Improves-and-Returns-to-Normal-After-Crisis/960x0.jpg?format=jpg&width=960" alt="Snow" style="width:40%; border-radius: 50px;  box-shadow: -5px 5px 8px 10px black; " >
-                <Button class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px; ">Population of USA</Button>
+                <Button class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px; " href='index.php?data_population=true'>Population of USA</Button>
             </div>
         </div>
         <div class="row" style="width:100%; margin-top: 100px;">
             <div class="col" align="center">
                 <img src="https://imageio.forbes.com/specials-images/imageserve/608b1289ae7bd9de116050b2/United-States-Economy-Improves-and-Returns-to-Normal-After-Crisis/960x0.jpg?format=jpg&width=960" alt="Snow" style="width:40%; border-radius: 50px;  box-shadow: -5px 5px 8px 10px black; " >
-                <Button class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px; ">Current Account Balance of USA</Button>
+                <Button class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px; " href='index.php?data_cab=true'>Current Account Balance of USA</Button>
             </div>
             <div class="col" align="center">
                 <img src="https://imageio.forbes.com/specials-images/imageserve/608b1289ae7bd9de116050b2/United-States-Economy-Improves-and-Returns-to-Normal-After-Crisis/960x0.jpg?format=jpg&width=960" alt="Snow" style="width:40%; border-radius: 50px;  box-shadow: -5px 5px 8px 10px black; " >
-                <Button class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px; ">Exchange Rate of China Against USA</Button>
+                <Button class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px; " href='index.php?data_exchange_rate=true'>Exchange Rate of China Against USA</Button>
             </div>
         </div>
     </div>
