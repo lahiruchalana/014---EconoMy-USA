@@ -46,24 +46,6 @@
     </nav>
 
     <?php 
-
-    function array2xml($array, $xml = false){
-
-        if($xml === false){
-            $xml = new SimpleXMLElement('<result/>');
-        }
-
-        foreach($array as $key => $value){
-            if(is_array($value)){
-                array2xml($value, $xml->addChild($key));
-            } else {
-                $xml->addChild($key, $value);
-            }
-        }
-
-        return $xml->asXML();
-    }
-
     $queryString = http_build_query([
         'access_key' => '4cf359f5b0195ecb221dd2dc7a6d891b',
         'categories' => 'business',
@@ -74,17 +56,12 @@
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $json = curl_exec($ch);
     curl_close($ch);
+
     $apiResult = json_decode($json, true);
     
     // Print all received data of News API - JSON format
     // print_r($apiResult);
     // print_r($apiResult->{"title"})
-
-    // Convert JSON data to XML - using array2xml function
-    $xml = array2xml($apiResult, false);
-
-    echo '<pre>';
-    print_r($xml);
 
     // List down News using JSON data
     foreach ($apiResult['data'] as $data) {
@@ -94,7 +71,40 @@
         echo "<img id='news_image' src='" . $data['image'] . "' >";
     }
 
-    ?>
+    
+    function array2xml($array, $parentkey="", $xml = false){
+
+        if($xml === false){
+            $xml = new SimpleXMLElement('<result/>');
+        }
+     
+        foreach($array as $key => $value){
+            if(is_array($value)){
+                array2xml($value, is_numeric((string) $key)?("n".$key):$key, $xml->addChild(is_numeric((string) $key)?$parentkey:$key));
+            } else {
+                $xml->addAttribute(is_numeric((string) $key)?("n".$key):$key, $value);
+            }
+        }
+     
+        return $xml->asXML();
+     }
+
+        // Convert JSON data to XML - using array2xml function
+        $xml = array2xml($apiResult, "", false);
+        echo '<pre>';
+        print_r($xml); // not working I think
+
+        function debug_to_console($data) {
+            $output = $data;
+            if (is_array($output))
+                $output = implode(',', $output);
+        
+            echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+        }
+        
+        debug_to_console($xml);
+        
+        ?>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>

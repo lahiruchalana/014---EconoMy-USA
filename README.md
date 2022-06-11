@@ -2,7 +2,7 @@
 
 This is a News Website for The Mirror News. 
 
-#Technologied Used 
+# Technologied Used 
 
 AJAX, 
 JavaScript, 
