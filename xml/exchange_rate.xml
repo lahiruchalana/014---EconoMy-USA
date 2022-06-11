@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data_set>
+    <!-- Exchange Rate of China Against US, Data Start -->
+    <data>
+    <indicator id="DPANUSSPB">Exchange rate, new LCU per USD extended backward, period average,,</indicator>
+    <country id="CHN">China</country>
+    <countryiso3code/>
+    <date>2020</date>
+    <value>7.0323552771</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="DPANUSSPB">Exchange rate, new LCU per USD extended backward, period average,,</indicator>
+    <country id="CHN">China</country>
+    <countryiso3code/>
+    <date>2019</date>
+    <value>6.90992268257</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="DPANUSSPB">Exchange rate, new LCU per USD extended backward, period average,,</indicator>
+    <country id="CHN">China</country>
+    <countryiso3code/>
+    <date>2018</date>
+    <value>6.6138529072</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="DPANUSSPB">Exchange rate, new LCU per USD extended backward, period average,,</indicator>
+    <country id="CHN">China</country>
+    <countryiso3code/>
+    <date>2017</date>
+    <value>6.75744643311</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="DPANUSSPB">Exchange rate, new LCU per USD extended backward, period average,,</indicator>
+    <country id="CHN">China</country>
+    <countryiso3code/>
+    <date>2016</date>
+    <value>6.64506707454</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="DPANUSSPB">Exchange rate, new LCU per USD extended backward, period average,,</indicator>
+    <country id="CHN">China</country>
+    <countryiso3code/>
+    <date>2015</date>
+    <value>6.28535870257</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="DPANUSSPB">Exchange rate, new LCU per USD extended backward, period average,,</indicator>
+    <country id="CHN">China</country>
+    <countryiso3code/>
+    <date>2014</date>
+    <value>6.16150771771</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="DPANUSSPB">Exchange rate, new LCU per USD extended backward, period average,,</indicator>
+    <country id="CHN">China</country>
+    <countryiso3code/>
+    <date>2013</date>
+    <value>6.1486866342</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="DPANUSSPB">Exchange rate, new LCU per USD extended backward, period average,,</indicator>
+    <country id="CHN">China</country>
+    <countryiso3code/>
+    <date>2012</date>
+    <value>6.30862898786</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="DPANUSSPB">Exchange rate, new LCU per USD extended backward, period average,,</indicator>
+    <country id="CHN">China</country>
+    <countryiso3code/>
+    <date>2011</date>
+    <value>6.46455861174</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <!-- Exchange Rate of China Against US, Data End -->
+</data_set>

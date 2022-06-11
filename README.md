@@ -1,6 +1,6 @@
-#  014---The-Mirror-News
+#  014---EconoMy-USA
 
-This is a News Website for The Mirror News. 
+This application prvides specific economic data of USA.
 
 # Technologied Used 
 

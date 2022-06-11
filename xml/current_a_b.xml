@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data_set>
+    <!-- Current Account Balance Data Start -->
+    <data>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2021</date>
+    <value/>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2020</date>
+    <value>-616087000000</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2019</date>
+    <value>-472145000000</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2018</date>
+    <value>-438241000000</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2017</date>
+    <value>-361702000000</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2016</date>
+    <value>-397573000000</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2015</date>
+    <value>-408884000000</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2014</date>
+    <value>-369978000000</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2013</date>
+    <value>-339455000000</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2012</date>
+    <value>-418112000000</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2011</date>
+    <value>-455297000000</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <!-- Current Account Balance Data End -->
+</data_set>

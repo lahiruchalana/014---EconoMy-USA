@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data_set>
+    <!-- <source id="2" name="World Development Indicators">
+        <concept id="Country">
+        <variable id="USA">
+        <metatype id="IncomeGroup">High income</metatype>
+        </variable>
+        </concept>
+    </source> -->
+    
+    <!-- Population Data Start  -->
+    <data>
+    <indicator id="SP.POP.TOTL">Population, total</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2021</date>
+    <value/>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="SP.POP.TOTL">Population, total</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2020</date>
+    <value>331501080</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="SP.POP.TOTL">Population, total</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2019</date>
+    <value>328329953</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="SP.POP.TOTL">Population, total</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2018</date>
+    <value>326838199</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="SP.POP.TOTL">Population, total</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2017</date>
+    <value>325122128</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="SP.POP.TOTL">Population, total</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2016</date>
+    <value>323071755</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="SP.POP.TOTL">Population, total</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2015</date>
+    <value>320738994</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="SP.POP.TOTL">Population, total</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2014</date>
+    <value>318386329</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="SP.POP.TOTL">Population, total</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2013</date>
+    <value>316059947</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="SP.POP.TOTL">Population, total</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2012</date>
+    <value>313877662</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <data>
+    <indicator id="SP.POP.TOTL">Population, total</indicator>
+    <country id="US">United States</country>
+    <countryiso3code>USA</countryiso3code>
+    <date>2011</date>
+    <value>311583481</value>
+    <unit/>
+    <obs_status/>
+    <decimal>0</decimal>
+    </data>
+    <!-- Population Data End  -->  
+</data_set>
