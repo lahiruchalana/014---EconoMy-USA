@@ -1,3 +1,22 @@
+<?php
+    // redirect to Home page
+    function redirectToHome() {
+        header("Location: index.php");
+        exit;
+    } 
+
+    if (isset($_GET['index'])) {
+        redirectToDataGDP();
+    } 
+
+    // load data using XML file
+    $xmlDoc = new DOMDocument();
+    $xmlDoc->load("xml/data_gdp.xml");
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,33 +58,36 @@
     </div>
     </nav>
 
-
     <?php
 
-        function redirectToHome() {
-            header("Location: index.php");
-            exit;
-        } 
-
-        if (isset($_GET['index'])) {
-            redirectToDataGDP();
-        } 
-
-        // // call XML file
-        // $xmlDoc = new DOMDocument();
-        // $xmlDoc->load("xml/data.xml");
-
+        // print the XML data
         // print $xmlDoc->saveXML();
 
-        $xmlDoc=simplexml_load_file("xml/data_gdp.xml") or die("Error: Cannot create object");
-
-        foreach($xmlDoc->children() as $books) {
-            echo $books->indicator . ", ";
-            echo $books->country . ", ";
-            echo $books->date . ", ";
-            echo $books->value . "</br>";
-        }
     ?>
+
+    <table id="data" border="1">
+        <tr>
+            <th></th>
+        </tr>
+    </table>
+
+
+    <script type="text/javascript">
+
+        var request = new XMLHttpRequest();
+        request.open("GET", "xml/data_gdp.xml", false);
+        request.send();
+        var xml = request.responseXML;
+        table = "<tr><th>Date</th><th>GDP</th><tr>";
+        var data = xml.getElementsByTagName("data");
+        for(var i = 0; i < data.length; i++) {
+            table += "<tr><td>" + data[i].getElementsByTagName("date")[0].childNodes[0].nodeValue + "</td><td>" + data[i].getElementsByTagName("value")[0].childNodes[0].nodeValue + "</td></tr>";
+            // console.log( data[i].getElementsByTagName("date")[0].childNodes[0].nodeValue);
+        }
+        document.getElementById("data").innerHTML = table;
+
+    </script>
+
         
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

@@ -1,3 +1,18 @@
+<?php
+
+    // redirect to Home page
+    function redirectToHome() {
+        header("Location: index.php");
+        exit;
+    } 
+
+    if (isset($_GET['index'])) {
+        redirectToDataGDP();
+    } 
+    
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,33 +54,18 @@
     </div>
     </nav>
 
-
     <?php
 
-        function redirectToHome() {
-            header("Location: index.php");
-            exit;
-        } 
-
-        if (isset($_GET['index'])) {
-            redirectToDataGDP();
-        } 
-
-
-        // // call XML file
-        // $xmlDoc = new DOMDocument();
-        // $xmlDoc->load("xml/data.xml");
-
-        // print $xmlDoc->saveXML();
-
+        // load data using XML file
         $xmlDoc=simplexml_load_file("xml/data_cab.xml") or die("Error: Cannot create object");
 
-        foreach($xmlDoc->children() as $books) {
-            echo $books->indicator . ", ";
-            echo $books->country . ", ";
-            echo $books->date . ", ";
-            echo $books->value . "</br>";
+        foreach($xmlDoc->children() as $data) {
+            echo $data->indicator . ", ";
+            echo $data->country . ", ";
+            echo $data->date . ", ";
+            echo $data->value . "</br>";
         }
+
     ?>
         
 
