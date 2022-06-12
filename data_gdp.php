@@ -23,13 +23,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BiZ News USA</title>
+    <title>EconoMy USA</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" >
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">BiZ News USA</a>
+    <a class="navbar-brand" href="#">EconoMy USA</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -65,9 +65,28 @@
 
     ?>
 
-    <table id="data" border="1">
+    </br>
+    <p style="margin-left: 50px;" class="h1">Gross Domestic Production of USA</p>
+
+    <div class="btn-group" style="margin-left: 80%; margin-top: -90px;">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select Year
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">2021</a>
+            <a class="dropdown-item" href="#">2020</a>
+            <a class="dropdown-item" href="#">2019</a>
+            <a class="dropdown-item" href="#">2018</a>
+
+        </div>
+    </div>
+
+    </br>
+
+
+    <table id="data" class="table table-striped table-dark" border="1">
         <tr>
-            <th></th>
+            <th scope="col"></th>
         </tr>
     </table>
 

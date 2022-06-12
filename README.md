@@ -11,4 +11,4 @@ MongoDB,
 XML, 
 Bootstrap, 
 HTML,
-CSS and https://mediastack.com/ API for News
+CSS.
