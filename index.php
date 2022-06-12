@@ -55,7 +55,7 @@
                 exit;
             }    
             function redirectToDataPopulation() {
-                header("Location: data_population.php");
+                header("Location: xml/data_population.xml");
                 exit;
             } 
             function redirectToDataCAB() {
