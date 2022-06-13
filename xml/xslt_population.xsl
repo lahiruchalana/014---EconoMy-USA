@@ -8,7 +8,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <th style="text-align:left">Year</th>
             <th style="text-align:left">Population</th>
         </tr>
-        <xsl:for-each select="data_set/population_data/data">
+        <xsl:for-each select="population_data/data">
         <tr>
             <td>
                 <xsl:value-of select="date"/>

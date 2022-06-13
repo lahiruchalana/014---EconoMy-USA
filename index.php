@@ -5,7 +5,7 @@
         exit;
     }    
     function redirectToDataPopulation() {
-        header("Location: xml/data_population.xml");
+        header("Location: data_population.php");
         exit;
     } 
     function redirectToDataCAB() {
@@ -104,11 +104,12 @@
         </div>
 
 
-        <p style="margin-left: 35%; margin-right: 35%; margin-top: 50px;" class="h2">EconoMy USA Quiz.. Try To Upgrade Your Knowledge!!</p>
+        <p style="margin-left: 35%; margin-right: 35%; margin-top: 50px;" class="h2">EconoMy USA Quiz.. </p>
+        <p style="margin-left: 35%; margin-right: 35%;" class="h4">Try To Upgrade Your Knowledge!!</p>
 
-        <form class="form-inline" style="margin-left: 35%; margin-right: 35%; margin-top: 50px; ">
-            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">What is the current Income Level of Unites States of America?</label>
-            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+        <form class="form-inline" style="margin-left: 35%; margin-right: 35%; margin-top: 30px; ">
+            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">1. What is the current Income Level of Unites States of America?</label>
+            <select class="custom-select my-1 mr-sm-2" id="income_level" onChange="update()">
                 <option selected>Choose...</option>
                 <option value="High income">High income</option>
                 <option value="Upper-middle income">Upper-middle income</option>
@@ -118,30 +119,23 @@
         </form>
         <button style="margin-left: 35%; margin-right: 35%;" class="btn btn-primary my-1" type="button" onclick="loadAnswer()">Is it correct answer?</button>
 
-        <p style="margin-left: 35%; margin-right: 35%; margin-top: 20px;  margin-bottom: 200px; color: green;" id="answer" class="h2"></p>
+        <p style="margin-left: 35%; margin-right: 35%; margin-top: 20px; color: green;" id="yes_or_no" class="h2"></p>
+        <p style="margin-left: 35%; margin-right: 35%; margin-top: 10px;  margin-bottom: 200px; color: green;" id="answer" class="h2"></p>
 
 
     </div>
 
-        <script type="text/javascript">
+    <script type="text/javascript">
+            
+            // get the value of selection of income level
+            function update() {
+                var select = document.getElementById('income_level');
+                var text = select.options[select.selectedIndex].text;
 
-            // function loadAnswer() {
-            //     var xhttp = new XMLHttpRequest();
-            //     xhttp.open("GET", "xml/data_income_level.xml", true);
-            //     xhttp.send();
-            //     var xml = xhttp.responseXML;
-            //     var data = xml.getElementsByTagName("source");
-            //     xhttp.onreadystatechange = function() {
-            //         if (this.readyState == 4 && this.status == 200) {
+                return text;
+            }
 
-            //             document.getElementById("answer").innerHTML = data.getElementsByTagName("incomelevel")[0].childNodes[0].nodeValue;
-            //             console.log(data.getElementsByTagName("incomelevel")[0].childNodes[0].nodeValue);
-            //         }
-            //     };
-
-            // }
-
-
+            // AJAX function to update the webpage with answer of income level
             function loadAnswer() {
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
@@ -155,9 +149,14 @@
 
             function myFunction(xml) {
                 var xmlDoc = xml.responseXML;
-                // var x = xmlDoc.getElementsByTagName("source");
-                document.getElementById("answer").innerHTML = xmlDoc.getElementsByTagName("incomelevel")[0].childNodes[0].nodeValue;
+                if (xmlDoc.getElementsByTagName("incomelevel")[0].childNodes[0].nodeValue == update()) {
+                    document.getElementById("yes_or_no").innerHTML = "Your answer is correct...";
+                    document.getElementById("answer").innerHTML = xmlDoc.getElementsByTagName("incomelevel")[0].childNodes[0].nodeValue;
+                } else {
+                    document.getElementById("yes_or_no").innerHTML = "Your answer is not correct... try again";
+                }
             }
+            
 
         </script>
 
