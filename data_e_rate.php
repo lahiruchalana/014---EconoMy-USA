@@ -54,19 +54,43 @@
     </nav>
 
 
-    <?php
+    <p style="margin-left: 35%; margin-right: 35%; margin-top: 50px; color: gray;" class="h4">Exchange Rate of China Against USA</p>
+    <p style="margin-left: 40%; margin-right: 40%; margin-top: 50px;  margin-bottom: 200px; color: green;" id="data" class="h4"></p>
 
-        // load data using XML file
-        $xmlDoc=simplexml_load_file("xml/data_e_rate.xml") or die("Error: Cannot create object");
-
-        foreach($xmlDoc->children() as $data) {
-            echo $data->indicator . ", ";
-            echo $data->country . ", ";
-            echo $data->date . ", ";
-            echo $data->value . "</br>";
+    <script>
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            showResult(xhttp.responseXML);
         }
+    };
+    xhttp.open("GET", "xml/data_e_rate.xml", true);
+    xhttp.send(); 
 
-    ?>
+    // added XPath for this function to redirect to elements of XML  
+    function showResult(xml) {
+        var txt = "";
+        path = "/data_set/data/value"
+        if (xml.evaluate) {
+            var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+            var result = nodes.iterateNext();
+            var year = 2021;
+            while (result) {
+                txt +=  year + " -- " + result.childNodes[0].nodeValue + "<br>";
+                year = year - 1;
+                result = nodes.iterateNext();
+            } 
+        // Code For Internet Explorer
+        } else if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
+            xml.setProperty("SelectionLanguage", "XPath");
+            nodes = xml.selectNodes(path);
+            for (i = 0; i < nodes.length; i++) {
+                txt += nodes[i].childNodes[0].nodeValue + "<br>";
+            }
+        }
+        document.getElementById("data").innerHTML = txt;
+    }
+    </script>
         
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
