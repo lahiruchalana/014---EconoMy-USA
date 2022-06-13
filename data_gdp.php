@@ -60,6 +60,8 @@
 
     <?php
 
+    // use this at another page to DOM 
+
         // print the XML data
         // print $xmlDoc->saveXML();
 
@@ -73,7 +75,8 @@
             Select Year
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">2021</a>
+        <!-- // or use AJAX then without refreshing can do that -->
+            <a class="dropdown-item" href="data_gdp.php?year=2020">2021</a> 
             <a class="dropdown-item" href="#">2020</a>
             <a class="dropdown-item" href="#">2019</a>
             <a class="dropdown-item" href="#">2018</a>
@@ -93,10 +96,10 @@
 
     <script type="text/javascript">
 
-        var request = new XMLHttpRequest();
-        request.open("GET", "xml/data_gdp.xml", false);
-        request.send();
-        var xml = request.responseXML;
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "xml/data_gdp.xml", false);
+        xhttp.send();
+        var xml = xhttp.responseXML;
         table = "<tr><th>Date</th><th>GDP</th><tr>";
         var data = xml.getElementsByTagName("data");
         for(var i = 0; i < data.length; i++) {

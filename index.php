@@ -1,3 +1,34 @@
+<?php 
+    // redirect to PHP pages
+    function redirectToDataGDP() {
+        header("Location: data_gdp.php");
+        exit;
+    }    
+    function redirectToDataPopulation() {
+        header("Location: xml/data_population.xml");
+        exit;
+    } 
+    function redirectToDataCAB() {
+        header("Location: data_cab.php");
+        exit;
+    } 
+    function redirectToDataERate() {
+        header("Location: data_e_rate.php");
+        exit;
+    } 
+
+    if (isset($_GET['data_gdp'])) {
+        redirectToDataGDP();
+    } else if (isset($_GET['data_population'])) {
+        redirectToDataPopulation();
+    } else if (isset($_GET['data_cab'])) {
+        redirectToDataCAB();
+    } else if (isset($_GET['data_exchange_rate'])) {
+        redirectToDataERate();
+    } 
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,36 +80,9 @@
         </div>
         </nav>
 
-        <?php 
-            function redirectToDataGDP() {
-                header("Location: data_gdp.php");
-                exit;
-            }    
-            function redirectToDataPopulation() {
-                header("Location: xml/data_population.xml");
-                exit;
-            } 
-            function redirectToDataCAB() {
-                header("Location: data_cab.php");
-                exit;
-            } 
-            function redirectToDataERate() {
-                header("Location: data_e_rate.php");
-                exit;
-            } 
+        <p style="margin-left: 10%; margin-top: 20px;" class="h3">Move On Your Need In EconoMy USA!!!</p>
 
-            if (isset($_GET['data_gdp'])) {
-                redirectToDataGDP();
-            } else if (isset($_GET['data_population'])) {
-                redirectToDataPopulation();
-            } else if (isset($_GET['data_cab'])) {
-                redirectToDataCAB();
-            } else if (isset($_GET['data_exchange_rate'])) {
-                redirectToDataERate();
-            } 
-        ?>
-            
-        <div class="row" style="width:100%; margin-top: 100px; ">
+        <div class="row" style="width:100%; margin-top: 50px; ">
             <div class="col" align="center">
                 <img src="https://imageio.forbes.com/specials-images/imageserve/608b1289ae7bd9de116050b2/United-States-Economy-Improves-and-Returns-to-Normal-After-Crisis/960x0.jpg?format=jpg&width=960" alt="Snow" style="width:40%; border-radius: 50px;  box-shadow: -5px 5px 8px 10px black; " >
                 <a class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px;" href='index.php?data_gdp=true'>GDP of USA</a>
@@ -98,8 +102,64 @@
                 <a class="btn btn-outline-primary" style="width:300px; border-radius: 10px; margin-left:20px; " href='index.php?data_exchange_rate=true'>Exchange Rate of China Against USA</a>
             </div>
         </div>
+
+
+        <p style="margin-left: 35%; margin-right: 35%; margin-top: 50px;" class="h2">EconoMy USA Quiz.. Try To Upgrade Your Knowledge!!</p>
+
+        <form class="form-inline" style="margin-left: 35%; margin-right: 35%; margin-top: 50px; ">
+            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">What is the current Income Level of Unites States of America?</label>
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                <option selected>Choose...</option>
+                <option value="High income">High income</option>
+                <option value="Upper-middle income">Upper-middle income</option>
+                <option value="Lower-middle income">Lower-middle income</option>
+                <option value="Low income">Low income</option>
+            </select>
+        </form>
+        <button style="margin-left: 35%; margin-right: 35%;" class="btn btn-primary my-1" type="button" onclick="loadAnswer()">Is it correct answer?</button>
+
+        <p style="margin-left: 35%; margin-right: 35%; margin-top: 20px;  margin-bottom: 200px; color: green;" id="answer" class="h2"></p>
+
+
     </div>
 
+        <script type="text/javascript">
+
+            // function loadAnswer() {
+            //     var xhttp = new XMLHttpRequest();
+            //     xhttp.open("GET", "xml/data_income_level.xml", true);
+            //     xhttp.send();
+            //     var xml = xhttp.responseXML;
+            //     var data = xml.getElementsByTagName("source");
+            //     xhttp.onreadystatechange = function() {
+            //         if (this.readyState == 4 && this.status == 200) {
+
+            //             document.getElementById("answer").innerHTML = data.getElementsByTagName("incomelevel")[0].childNodes[0].nodeValue;
+            //             console.log(data.getElementsByTagName("incomelevel")[0].childNodes[0].nodeValue);
+            //         }
+            //     };
+
+            // }
+
+
+            function loadAnswer() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                    }
+                };
+                xhttp.open("GET", "xml/data_income_level.xml", true);
+                xhttp.send();
+            }
+
+            function myFunction(xml) {
+                var xmlDoc = xml.responseXML;
+                // var x = xmlDoc.getElementsByTagName("source");
+                document.getElementById("answer").innerHTML = xmlDoc.getElementsByTagName("incomelevel")[0].childNodes[0].nodeValue;
+            }
+
+        </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>

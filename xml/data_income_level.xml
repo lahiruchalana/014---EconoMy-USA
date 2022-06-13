@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data_set>
+    <source id="2" name="World Development Indicators">
+        <concept id="Country">
+        <variable id="USA">
+        <incomelevel id="IncomeGroup">High income</incomelevel>
+        </variable>
+        </concept>
+    </source>
+    <source id="2" name="World Development Indicators">
+        <concept id="Country">
+        <variable id="China">
+        <incomelevel id="IncomeGroup">Upper middle income</incomelevel>
+        </variable>
+        </concept>
+    </source>
+</data_set>
