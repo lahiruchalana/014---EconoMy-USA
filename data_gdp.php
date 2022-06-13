@@ -70,31 +70,63 @@
     </br>
     <p style="margin-left: 50px;" class="h1">Gross Domestic Production of USA</p>
 
-    <div class="btn-group" style="margin-left: 80%; margin-top: -90px;">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Select Year
-        </button>
-        <div class="dropdown-menu">
-        <!-- // or use AJAX then without refreshing can do that -->
-            <a class="dropdown-item" href="data_gdp.php?year=2020">2021</a> 
-            <a class="dropdown-item" href="#">2020</a>
-            <a class="dropdown-item" href="#">2019</a>
-            <a class="dropdown-item" href="#">2018</a>
-
-        </div>
-    </div>
+    <form class="form-inline" style="margin-left: 70%; margin-top: -55px;">
+            <select class="custom-select my-1 mr-sm-2" id="selected_year" onChange="update()">
+                <option selected>Select Year...</option>
+                <option value="1">2021</option>
+                <option value="2">2020</option>
+                <option value="3">2019</option>
+                <option value="4">2018</option>
+                <option value="5">2017</option>
+                <option value="6">2016</option>
+                <option value="7">2015</option>
+                <option value="8">2014</option>
+                <option value="9">2013</option>
+                <option value="10">2012</option>
+                <option value="11">2011</option>
+            </select>
+        </form>
 
     </br>
 
+
+    <p style="margin-left: 25%; margin-right: 25%; margin-top: 10px;  margin-bottom: 30px; color: green;" id="answer" class="h2"></p>
 
     <table id="data" class="table table-striped table-dark" border="1">
         <tr>
             <th scope="col"></th>
         </tr>
     </table>
-
+   
 
     <script type="text/javascript">
+
+        // get the value of selection of income level
+        function update() {
+            var select = document.getElementById('selected_year');
+            var text = select.options[select.selectedIndex].text;
+
+            // Ajax function to display the related GDP of the selected year
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                myFunction(this);
+                }
+            };
+            xhttp.open("GET", "xml/data_gdp.xml", true);
+            xhttp.send();
+            
+            function myFunction(xml) {
+                var xmlDoc = xml.responseXML;
+                var data = xmlDoc.getElementsByTagName("data");
+                for(var i = 0; i < data.length; i++) {
+                    if (data[i].getElementsByTagName("date")[0].childNodes[0].nodeValue== text) {
+                        document.getElementById("answer").innerHTML = "GDP of USA in " + text + " is: " + data[i].getElementsByTagName("value")[0].childNodes[0].nodeValue;
+                    } 
+                }
+            }
+        }
+        
 
         var xhttp = new XMLHttpRequest();
         xhttp.open("GET", "xml/data_gdp.xml", false);
@@ -104,7 +136,6 @@
         var data = xml.getElementsByTagName("data");
         for(var i = 0; i < data.length; i++) {
             table += "<tr><td>" + data[i].getElementsByTagName("date")[0].childNodes[0].nodeValue + "</td><td>" + data[i].getElementsByTagName("value")[0].childNodes[0].nodeValue + "</td></tr>";
-            // console.log( data[i].getElementsByTagName("date")[0].childNodes[0].nodeValue);
         }
         document.getElementById("data").innerHTML = table;
 

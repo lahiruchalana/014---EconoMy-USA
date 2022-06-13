@@ -154,6 +154,7 @@
                     document.getElementById("answer").innerHTML = xmlDoc.getElementsByTagName("incomelevel")[0].childNodes[0].nodeValue;
                 } else {
                     document.getElementById("yes_or_no").innerHTML = "Your answer is not correct... try again";
+                    document.getElementById("answer").innerHTML = "";
                 }
             }
             
