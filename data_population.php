@@ -54,21 +54,27 @@
     </div>
     </nav>
 
+    <table id="data" class="table table-striped table" border="1">
+        <tr>
+            <th scope="col"></th>
+        </tr>
+    </table>
 
-    <?php
 
-        // load data using XML file
-        $xmlDoc=simplexml_load_file("xml/data_population.xml") or die("Error: Cannot create object");
+    <script type="text/javascript">
 
-        foreach($xmlDoc->children() as $data) {
-            echo $data->indicator . ", ";
-            echo $data->country . ", ";
-            echo $data->date . ", ";
-            echo $data->value . "</br>";
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "xml/data_population.xml", false);
+        xhttp.send();
+        var xml = xhttp.responseXML;
+        table = "<tr><th>Date</th><th>Population</th><tr>";
+        var data = xml.getElementsByTagName("data");
+        for(var i = 0; i < data.length; i++) {
+            table += "<tr><td>" + data[i].getElementsByTagName("date")[0].childNodes[0].nodeValue + "</td><td>" + data[i].getElementsByTagName("value")[0].childNodes[0].nodeValue + "</td></tr>";
         }
+        document.getElementById("data").innerHTML = table;
 
-    ?>
-        
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>

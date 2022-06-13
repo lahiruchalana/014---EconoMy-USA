@@ -60,10 +60,9 @@
         $xmlDoc=simplexml_load_file("xml/data_cab.xml") or die("Error: Cannot create object");
 
         foreach($xmlDoc->children() as $data) {
-            echo $data->indicator . ", ";
-            echo $data->country . ", ";
-            echo $data->date . ", ";
-            echo $data->value . "</br>";
+            echo $data->indicator . " ";
+            echo $data->date . " :- ";
+            echo $data->value . "</br></br>";
         }
 
     ?>

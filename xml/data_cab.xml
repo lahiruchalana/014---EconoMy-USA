@@ -2,17 +2,17 @@
 <data_set>
     <!-- Current Account Balance Data Start -->
     <data>
-    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance</indicator>
     <country id="US">United States</country>
     <countryiso3code>USA</countryiso3code>
     <date>2021</date>
-    <value/>
+    <value>Counting...</value>
     <unit/>
     <obs_status/>
     <decimal>0</decimal>
     </data>
     <data>
-    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance</indicator>
     <country id="US">United States</country>
     <countryiso3code>USA</countryiso3code>
     <date>2020</date>
@@ -22,7 +22,7 @@
     <decimal>0</decimal>
     </data>
     <data>
-    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance</indicator>
     <country id="US">United States</country>
     <countryiso3code>USA</countryiso3code>
     <date>2019</date>
@@ -32,7 +32,7 @@
     <decimal>0</decimal>
     </data>
     <data>
-    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance</indicator>
     <country id="US">United States</country>
     <countryiso3code>USA</countryiso3code>
     <date>2018</date>
@@ -42,7 +42,7 @@
     <decimal>0</decimal>
     </data>
     <data>
-    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance</indicator>
     <country id="US">United States</country>
     <countryiso3code>USA</countryiso3code>
     <date>2017</date>
@@ -52,7 +52,7 @@
     <decimal>0</decimal>
     </data>
     <data>
-    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance</indicator>
     <country id="US">United States</country>
     <countryiso3code>USA</countryiso3code>
     <date>2016</date>
@@ -62,7 +62,7 @@
     <decimal>0</decimal>
     </data>
     <data>
-    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance</indicator>
     <country id="US">United States</country>
     <countryiso3code>USA</countryiso3code>
     <date>2015</date>
@@ -72,7 +72,7 @@
     <decimal>0</decimal>
     </data>
     <data>
-    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance</indicator>
     <country id="US">United States</country>
     <countryiso3code>USA</countryiso3code>
     <date>2014</date>
@@ -82,7 +82,7 @@
     <decimal>0</decimal>
     </data>
     <data>
-    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance</indicator>
     <country id="US">United States</country>
     <countryiso3code>USA</countryiso3code>
     <date>2013</date>
@@ -92,7 +92,7 @@
     <decimal>0</decimal>
     </data>
     <data>
-    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance</indicator>
     <country id="US">United States</country>
     <countryiso3code>USA</countryiso3code>
     <date>2012</date>
@@ -102,7 +102,7 @@
     <decimal>0</decimal>
     </data>
     <data>
-    <indicator id="BN.CAB.XOKA.CD">Current account balance (BoP, current US$)</indicator>
+    <indicator id="BN.CAB.XOKA.CD">Current account balance</indicator>
     <country id="US">United States</country>
     <countryiso3code>USA</countryiso3code>
     <date>2011</date>
