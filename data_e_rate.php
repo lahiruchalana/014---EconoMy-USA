@@ -54,8 +54,8 @@
     </nav>
 
 
-    <p style="margin-left: 35%; margin-right: 35%; margin-top: 50px; color: gray;" class="h4">Exchange Rate of China Against USA</p>
-    <p style="margin-left: 40%; margin-right: 40%; margin-top: 50px;  margin-bottom: 200px; color: green;" id="data" class="h4"></p>
+    <p style="margin-left: 35%; margin-right: 35%; margin-top: 50px; color: #06283D;" class="h4">Exchange Rate of China Against USA</p>
+    <p style="margin-left: 35%; margin-right: 35%; margin-top: 50px;  margin-bottom: 200px; color: #1363DF;" id="data" class="h4"></p>
 
     <script>
     var xhttp = new XMLHttpRequest();
@@ -76,7 +76,7 @@
             var result = nodes.iterateNext();
             var year = 2021;
             while (result) {
-                txt +=  year + " -- " + result.childNodes[0].nodeValue + "<br>";
+                txt +=  year + " -- " + result.childNodes[0].nodeValue + " Chinese Yuan" + "<br>";
                 year = year - 1;
                 result = nodes.iterateNext();
             } 
@@ -85,7 +85,7 @@
             xml.setProperty("SelectionLanguage", "XPath");
             nodes = xml.selectNodes(path);
             for (i = 0; i < nodes.length; i++) {
-                txt += nodes[i].childNodes[0].nodeValue + "<br>";
+                txt += nodes[i].childNodes[0].nodeValue + " Chinese Yuan" +"<br>";
             }
         }
         document.getElementById("data").innerHTML = txt;
